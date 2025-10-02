@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Find a Doctor CareGuide</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f7f9fc;
+      color: #333;
+    }
+
+    header {
+      background: #004080;
+      color: white;
+      padding: 2.5rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    .search-section {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+    }
+
+    .search-section h2 {
+      color: #004080;
+      margin-bottom: 1rem;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .filters select {
+      flex: 1;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    .doctor-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      color: #004080;
+      margin-bottom: 0.25rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .card .availability {
+      margin-top: 0.5rem;
+      color: green;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Find a Doctor</h1>
+    <p>Connect with trusted healthcare professionals anytime, anywhere.</p>
+  </header>
+
+  <main>
+
+    <section class="search-section">
+      <h2>Search Filters</h2>
+      <div class="filters">
+        <select>
+          <option value="">Select Specialty</option>
+          <option value="general">General Practitioner</option>
+          <option value="mental">Mental Health</option>
+          <option value="nutrition">Nutritionist</option>
+          <option value="fitness">Fitness Coach</option>
+        </select>
+
+        <select>
+          <option value="">Select Location</option>
+          <option value="virtual">Virtual Consultation</option>
+          <option value="newyork">New York, NY</option>
+          <option value="la">Los Angeles, CA</option>
+          <option value="chicago">Chicago, IL</option>
+        </select>
+
+        <select>
+          <option value="">Availability</option>
+          <option value="now">Available Now</option>
+          <option value="today">Today</option>
+          <option value="week">This Week</option>
+        </select>
+      </div>
+    </section>
+
+    <section>
+      <h2 style="color:#004080; margin-bottom:1.5rem;">Featured Doctors</h2>
+      <div class="doctor-cards">
+        <div class="card">
+          <img src="sarah_doc.png" alt="Doctor">
+          <h3>Dr. Sarah Miles</h3>
+          <p>General Practitioner<br>New York, NY</p>
+          <p class="availability">Available Now</p>
+        </div>
+
+        <div class="card">
+          <img src="jason_doc.png" alt="Doctor">
+          <h3>Dr. Jason Lee</h3>
+          <p>Mental Health Specialist<br>Virtual</p>
+          <p class="availability">Available Today</p>
+        </div>
+
+        <div class="card">
+          <img src="amit_doc.png" alt="Doctor">
+          <h3>Dr. Amit Patel</h3>
+          <p>Nutritionist<br>Chicago, IL</p>
+          <p class="availability">Available This Week</p>
+        </div>
+
+        <div class="card">
+          <img src="mark_coach.png" alt="Doctor">
+          <h3>Coach Mark Evans</h3>
+          <p>Fitness Coach<br>Los Angeles, CA</p>
+          <p class="availability">Available Now</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; CareGuide. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
